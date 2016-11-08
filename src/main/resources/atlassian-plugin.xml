@@ -1,0 +1,15 @@
+<atlassian-plugin key="${atlassian.plugin.key}" name="${project.name}"
+	plugins-version="2">
+	<plugin-info>
+		<description>${project.description}</description>
+		<version>${project.version}</version>
+		<vendor name="${project.organization.name}" url="${project.organization.url}" />
+	</plugin-info>
+
+	<lifecycle key="trehnLifecycleListener" name="Codeyard Lifecycle Listener"
+		class="com.trehn.CodeyardLifecycleListener" sequence="4000">
+		<description>Listens to lifecycle events, tries to start some durable
+			server instance</description>
+	</lifecycle>
+
+</atlassian-plugin>
